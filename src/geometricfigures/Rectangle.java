@@ -5,15 +5,17 @@ import java.util.Scanner;
 //The Rectangle has four fields
 public class Rectangle {
 	private String name;
-	private double length;
-	private double width;
+	private int length;
+	private int width;
 	
 	//Rectangle class has one constructor
-	public Rectangle (String aName, double aLength, double aWidth) {
+	public Rectangle (String aName, int aLength, int aWidth) {
 		name = aName;
 		length = aLength;
 		width = aWidth;
 	}
+	
+	Scanner newValue = new Scanner(System.in);
 	
 	//Rectangle class has 6 methods
 	public String getName() {
@@ -28,18 +30,18 @@ public class Rectangle {
 		return (2 * length) + (2 * width);
 	}
 	
-	public void changeWidth() {
+	public int changeWidth() {
 		System.out.println("Set new width value: ");
-		Scanner newValue = new Scanner(System.in);
 		int newWidthValue = newValue.nextInt();
-		newValue.close();
-		}
+		width = newWidthValue;
+		return width;
+	}
 	
-	public void changeLength() {
+	public int changeLength() {
 		System.out.println("Set new length value: ");
-		Scanner newValue = new Scanner(System.in);
 		int newLengthValue = newValue.nextInt();
-		newValue.close();
+		length = newLengthValue;
+		return length;
 	}
 	
 	public void printValues() {

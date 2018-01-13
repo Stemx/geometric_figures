@@ -6,14 +6,15 @@ public class GeometricFigures {
 
 	public static void main(String[] args) {
 		
-		//Nowa tablica klas
-		//pole 
+		//New array of Rectangle class fields
+		//An array contains 4 index
 		Rectangle[] rec = new Rectangle[4];
-		rec[0] = new Rectangle ("Mikro prostokąt", 1.5, 0.4);
-		rec[1] = new Rectangle ("Mały prostokąt", 4.5, 3.4);
-		rec[2] = new Rectangle ("Średni prostokąt", 9.456, 5.67);
-		rec[3] = new Rectangle ("Duży prostokąt", 15.55, 10.0);
+		rec[0] = new Rectangle ("Extra small rectangle", 2, 1);
+		rec[1] = new Rectangle ("Small rectangle", 5, 3);
+		rec[2] = new Rectangle ("Medium rectangle", 10, 5);
+		rec[3] = new Rectangle ("Large rectangle", 19, 11);
 		
+		//Print values, squares and perimeter of rectangles
 		for (Rectangle r: rec)
 		{
 			r.printValues();
@@ -22,22 +23,18 @@ public class GeometricFigures {
 			System.out.println("**************************");
 		}
 		
-		rec[0].changeLength();
-		rec[0].changeWidth();
+		//Change rectangle width and length
+		for (Rectangle r: rec)
+		{
+			System.out.println(r.getName());
+			r.changeLength();
+			r.changeWidth();
+		}
 		
-		rec[0].printValues();
-		
-		/*
-		System.out.println(rec[0].getName());
-		System.out.println(rec[1].getName());
-		
-		System.out.println(rec[0].getSquare());
-		System.out.println(rec[1].getSquare());
-		
-		System.out.println(rec[0].getPerimeter());
-		System.out.println(rec[1].getPerimeter());
-		*/
-		
+		for (Rectangle r: rec)
+		{
+			r.printValues();
+		}
 		
 	}
 
