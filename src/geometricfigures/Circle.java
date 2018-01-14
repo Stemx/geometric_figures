@@ -1,5 +1,5 @@
 package geometricfigures;
 
-public class Circle {
+public class Circle extends Menu {
 
 }

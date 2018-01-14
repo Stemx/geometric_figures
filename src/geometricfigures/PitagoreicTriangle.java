@@ -1,5 +1,5 @@
 package geometricfigures;
 
-public class PitagoreicTriangle {
+public class PitagoreicTriangle extends Triangle {
 
 }

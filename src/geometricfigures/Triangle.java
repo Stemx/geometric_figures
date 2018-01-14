@@ -1,5 +1,5 @@
 package geometricfigures;
 
-public class Triangle {
+public class Triangle extends Menu{
 
 }

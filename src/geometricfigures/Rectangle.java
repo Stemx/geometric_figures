@@ -3,7 +3,7 @@ package geometricfigures;
 import java.util.Scanner;
 
 //The Rectangle has four fields
-public class Rectangle {
+public class Rectangle extends Menu {
 	private String name;
 	private int length;
 	private int width;
@@ -22,7 +22,33 @@ public class Rectangle {
 		return name;
 	}
 	
-	public double getSquare() {
+	public String setName() {
+		String newName = newValue.nextLine();
+		this.name = newName;
+		return name;
+	}
+	
+	public double getLength() {
+		return length;
+	}
+	
+	public int setLength() {
+		int newLength = newValue.nextInt();
+		this.length = newLength;
+		return length;
+	}
+	
+	public double getWidth() {
+		return width;
+	}
+	
+	public int setWidth() {
+		int newWidth = newValue.nextInt();
+		this.width = newWidth;
+		return width;
+	}
+	
+	public double getArea() {
 		return length * width;
 	}
 	
@@ -44,7 +70,14 @@ public class Rectangle {
 		return length;
 	}
 	
+	public String changeName() {
+		System.out.println("Set new name: ");
+		String newName = newValue.nextLine();
+		name = newName;
+		return name;
+	}
+	
 	public void printValues() {
-		System.out.println("Rectangle name: " + name + " Length: " + length + " Width: " + width);
+		System.out.println("Rectangle name: " + name + ". Length: " + length + ". Width: " + width + " Area: " + getArea() + " Perimeter: " + getPerimeter());
 	}
 }
