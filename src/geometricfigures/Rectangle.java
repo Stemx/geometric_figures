@@ -22,7 +22,11 @@ public class Rectangle extends Menu {
 		return name;
 	}
 	
-	public String setName() {
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String changeName() {
 		System.out.println("Set new name: ");
 		String newName = newValue.nextLine();
 		this.name = newName;
@@ -33,7 +37,11 @@ public class Rectangle extends Menu {
 		return length;
 	}
 	
-	public double setLength() {
+	public void setLength(double length) {
+		this.length = length;
+	}
+	
+	public double changleLength() {
 		System.out.println("Set new length value: ");
 		double newLengthValue = newValue.nextDouble();
 		length = newLengthValue;
@@ -44,7 +52,11 @@ public class Rectangle extends Menu {
 		return width;
 	}
 	
-	public double setWidth() {
+	public void setWidth(double width) {
+		this.width = width;
+	}
+	
+	public double changeWidth() {
 		System.out.println("Set new width value: ");
 		int newWidthValue = newValue.nextInt();
 		width = newWidthValue;

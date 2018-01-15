@@ -6,7 +6,9 @@ public class GeometricFigures {
 
 	public static void main(String[] args) {
 		
-		//New scanner
+		
+		
+		/*
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("How many rectangles do you want to have?");
@@ -14,6 +16,7 @@ public class GeometricFigures {
 		
 		//New Rectangle array
 		Rectangle[] rec = new Rectangle[recNumber];
+		Triangle tri = new Triangle("Warsaw", 5.0, 6.0);
 		
 		System.out.println("Array length: " + rec.length);
 		
@@ -31,9 +34,9 @@ public class GeometricFigures {
 		
 		for (Rectangle r : rec)
 		{
-			r.changeName();
-			r.changeLength();
-			r.changeWidth();
+			r.setName();
+			r.setLength();
+			r.setWidth();
 		}
 		
 		for (Rectangle r : rec)
@@ -42,7 +45,13 @@ public class GeometricFigures {
 			System.out.println("***");
 		}
 		
+		System.out.println("Height: " + tri.getName());
+		String newName = "Danzig";
+		tri.setName(newName);
+		System.out.println("Height: " + tri.getName());
+		
 		scanner.close();
+		*/
 		
 	}
 
