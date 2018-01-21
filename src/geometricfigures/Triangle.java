@@ -13,8 +13,10 @@ public class Triangle extends Menu{
 		setBase(aBase);
 	}
 	
+	//New Scanner object
 	Scanner newValue = new Scanner(System.in);
 
+	//Class Triangle have 11 methods
 	public String getName() {
 		return name;
 	}
@@ -68,5 +70,15 @@ public class Triangle extends Menu{
 		System.out.println("/Actual triangle values/  Name: " + getName() + ". Height: " + getHeight() + ". Base: " + getBase() + ". Area: " + getTriangleArea());
 	}
 	
-	
+	//Unit test
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Add Base and Height");
+		String n = sc.nextLine();
+		int b = sc.nextInt();
+		int h = sc.nextInt();
+		Triangle t = new Triangle(n, h, b);
+		System.out.println(t.getTriangleArea());
+		sc.close();
+	}
 }

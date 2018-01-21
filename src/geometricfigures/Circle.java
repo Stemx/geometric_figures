@@ -4,10 +4,10 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class Circle extends Menu {
-	int radius;
-	String name;
+	private String name;
+	private int radius;
 	
-	public Circle(int aRadius, String aName) {
+	public Circle(String aName, int aRadius) {
 		name = aName;
 		radius = aRadius;
 	}
@@ -15,7 +15,7 @@ public class Circle extends Menu {
 	//Run scanner
 	Scanner newValue = new Scanner(System.in);
 	
-	//Name methods
+	//Class Circle have 9 methods
 	public String getName() {
 		return name;
 	}
@@ -56,7 +56,19 @@ public class Circle extends Menu {
 	}
 	
 	public void printValues() {
-		System.out.println("/Your Circle values/ Name: " + getName() + ". Radius: " + getRadius() + ". Area: " + getCircleArea() + "Perimeter: " + getCirclePerimeter());
+		System.out.println("/Your Circle values/ Name: " + getName() + ". Radius: " + getRadius() + ". Area: " + getCircleArea() + ". Perimeter: " + getCirclePerimeter());
 	}
 
+public static void main(String[] args) {
+	Circle circle = new Circle("", 0);
+	circle.setName("Random");
+	circle.setRadius(5);
+	circle.printValues();
+	circle.changeName();
+	circle.changeRadius();
+	System.out.println();
+	System.out.println("------------------");
+	circle.printValues();
+}
+	
 }

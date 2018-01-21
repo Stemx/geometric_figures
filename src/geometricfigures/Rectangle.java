@@ -3,21 +3,22 @@ package geometricfigures;
 import java.util.Scanner;
 
 //The Rectangle has four fields
-public class Rectangle extends Menu {
+public class Rectangle {
 	private String name;
-	private double length;
-	private double width;
+	private int length;
+	private int width;
 	
 	//Rectangle class has one constructor
-	public Rectangle (String aName, double aLength, double aWidth) {
+	public Rectangle (String aName, int aLength, int aWidth) {
 		name = aName;
 		length = aLength;
 		width = aWidth;
 	}
 	
+	//New Scanner object
 	Scanner newValue = new Scanner(System.in);
 	
-	//Rectangle class has 6 methods
+	//Rectangle class have 12 methods
 	public String getName() {
 		return name;
 	}
@@ -33,30 +34,30 @@ public class Rectangle extends Menu {
 		return name;
 	}
 	
-	public double getLength() {
+	public int getLength() {
 		return length;
 	}
 	
-	public void setLength(double length) {
+	public void setLength(int length) {
 		this.length = length;
 	}
 	
-	public double changleLength() {
+	public int changeLength() {
 		System.out.println("Set new length value: ");
-		double newLengthValue = newValue.nextDouble();
+		int newLengthValue = newValue.nextInt();
 		length = newLengthValue;
 		return length;
 	}
 	
-	public double getWidth() {
+	public int getWidth() {
 		return width;
 	}
 	
-	public void setWidth(double width) {
+	public void setWidth(int width) {
 		this.width = width;
 	}
 	
-	public double changeWidth() {
+	public int changeWidth() {
 		System.out.println("Set new width value: ");
 		int newWidthValue = newValue.nextInt();
 		width = newWidthValue;
